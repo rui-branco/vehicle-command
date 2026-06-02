@@ -204,6 +204,8 @@ func ExtractCommandAction(ctx context.Context, command string, params RequestPar
 		return func(v *vehicle.Vehicle) error { return v.FlashLights(ctx) }, nil
 	case "honk_horn":
 		return func(v *vehicle.Vehicle) error { return v.HonkHorn(ctx) }, nil
+	case "dashcam_save_clip":
+		return func(v *vehicle.Vehicle) error { return v.DashcamSaveClip(ctx) }, nil
 	case "remote_start_drive":
 		return func(v *vehicle.Vehicle) error { return v.RemoteDrive(ctx) }, nil
 	case "open_tonneau":
